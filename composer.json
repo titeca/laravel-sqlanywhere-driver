@@ -1,0 +1,38 @@
+{
+    "name": "titeca/laravel-sqlanywhere-driver",
+    "description": "Laravel database driver to connect to a sqlanywhere database instance",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Stijn Goethals",
+            "email": "stijn.goethals@titeca.be"
+        }
+    ],
+    "keywords": [
+        "laravel", "database", "driver", "sqlanywhere", "sybase"
+    ],
+    "require": {
+        "php": ">=8.0",
+		"ext-sqlanywhere": "*",
+		"illuminate/config": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Titeca\\SqlAnywhere\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Titeca\\SqlAnywhere\\ServiceProvider"
+            ],
+			"aliases": {
+                "SqlAnywhere": "Titeca\\SqlAnywhere\\PDO\\Client"
+            }
+        }
+    }
+}
