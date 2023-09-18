@@ -3,7 +3,7 @@
     "description": "Laravel database driver to connect to a sqlanywhere database instance",
     "type": "library",
     "license": "MIT",
-    "version": "1.0",
+    "version": "1.1",
     "authors": [
         {
             "name": "Stijn Goethals",
