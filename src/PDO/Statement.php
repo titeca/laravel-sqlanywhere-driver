@@ -36,7 +36,7 @@ class Statement
 	 * @param  mixed $&value
 	 * @return self
 	 */
-	public function bind($key, $value): self
+	public function bindValue($key, $value): self
     {
         is_string($key) ? $this->bindings[$key] = $value : $this->bindings[] = $value;
         return $this;
