@@ -3,7 +3,7 @@
     "description": "Laravel database driver to connect to a sqlanywhere database instance",
     "type": "library",
     "license": "MIT",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "authors": [
         {
             "name": "Stijn Goethals",
@@ -16,8 +16,8 @@
     "require": {
         "php": ">=8.0",
 		"ext-sqlanywhere": "*",
-        "illuminate/database": "^8.0|^9.0|^10.0",
-        "illuminate/support": "^8.0|^9.0|^10.0"
+        "illuminate/database": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
