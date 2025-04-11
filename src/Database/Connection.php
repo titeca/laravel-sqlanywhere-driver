@@ -37,24 +37,24 @@ class Connection extends BaseConnection
 	}
 
     /**
-	 * Get the default query grammar instance.
-	 *
-	 * @return \Titeca\SqlAnywhere\Grammar\QueryGrammar
-	 */
-	protected function getDefaultQueryGrammar(): Grammar\QueryGrammar
-	{
-        return $this->withTablePrefix(new Grammar\QueryGrammar);
-	}
+     * Get the default query grammar instance.
+     *
+     * @return \Illuminate\Database\Query\Grammars\Grammar
+     */
+    protected function getDefaultQueryGrammar()
+    {
+        return new Grammar\QueryGrammar($this);
+    }
 
 	/**
-	 * Get the default schema grammar instance.
-	 *
-	 * @return \Titeca\SqlAnywhere\Grammar\SchemaGrammar
-	 */
-	protected function getDefaultSchemaGrammar(): Grammar\SchemaGrammar
-	{
-        return $this->withTablePrefix(new Grammar\SchemaGrammar);
-	}
+     * Get the default schema grammar instance.
+     *
+     * @return \Illuminate\Database\Schema\Grammars\Grammar|null
+     */
+    protected function getDefaultSchemaGrammar()
+    {
+        return new Grammar\SchemaGrammar($this);
+    }
 
     /**
 	 * Run a select statement against the database.

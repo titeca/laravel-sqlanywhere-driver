@@ -23,11 +23,13 @@ class SchemaGrammar extends Grammar {
 	protected $modifiers = array('Unsigned', 'Nullable', 'Default', 'Increment');
 
 	/**
-	 * Compile the query to determine if a table exists.
-	 *
-	 * @return string
-	 */
-	public function compileTableExists()
+     * Compile the query to determine if the given table exists.
+     *
+     * @param  string|null  $schema
+     * @param  string  $table
+     * @return string|null
+     */
+    public function compileTableExists($schema, $table)
 	{
 		return 'SELECT * FROM sys.systab WHERE table_type_str = ?';
 	}
